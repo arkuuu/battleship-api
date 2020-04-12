@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "41f11d6f-6ce6-45df-ae59-6f7e56357b31",
+		"name": "battleship-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Start new game",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/game",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get game (for debug)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/game/{{gameToken}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game",
+						"{{gameToken}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place ship",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ship\": \"submarine\",\n    \"field\": \"B2\",\n    \"direction\": \"vertical\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/game/{{gameToken}}/ship",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game",
+						"{{gameToken}}",
+						"ship"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fire shot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"field\": \"A2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/game/{{gameToken}}/shot?XDEBUG_SESSION_START=PHPSTORM",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"game",
+						"{{gameToken}}",
+						"shot"
+					],
+					"query": [
+						{
+							"key": "XDEBUG_SESSION_START",
+							"value": "PHPSTORM"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
