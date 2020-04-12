@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/web/nginx.conf:/etc/nginx/nginx.conf
+      - ./docker/web/site.conf:/etc/nginx/conf.d/default.conf
+      - ./public:/var/www/app/public
+    depends_on:
+      - php
+      - db
+
+  php:
+    build: docker/php
+    volumes:
+      - ./:/var/www/app/
+
+  db:
+    image: mariadb:latest
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./docker/db/conf.cnf:/etc/mysql/conf.d/conf.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_USER: app
+      MYSQL_PASSWORD: mysql
+
+volumes:
+
+  dbdata:
+
+
