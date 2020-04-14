@@ -87,7 +87,7 @@ class Board
     }
 
 
-    private function hasShip($shipType): bool
+    private function hasShip(string $shipType): bool
     {
         return isset($this->shipHealth[$shipType]);
     }

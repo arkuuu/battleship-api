@@ -3,7 +3,7 @@
 ## Documentation
 
 ### Setup
-When you have docker installed, just run
+If you have docker installed, just run
 ```shell script
 docker-compose up
 ```
