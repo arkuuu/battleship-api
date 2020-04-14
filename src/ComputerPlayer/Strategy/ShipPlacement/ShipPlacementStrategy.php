@@ -9,7 +9,7 @@ interface ShipPlacementStrategy
 
     /**
      * @param \App\Game\Board $ownBoard
-     * @param \App\Game\Ship  $playableShips
+     * @param \App\Game\Ship[]  $playableShips
      */
     public function placeShips(\App\Game\Board $ownBoard, array $playableShips): void;
 }

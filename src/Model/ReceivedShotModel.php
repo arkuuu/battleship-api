@@ -45,7 +45,7 @@ class ReceivedShotModel extends Model
                     );
                 }
             }
-        };
+        }
     }
 
 

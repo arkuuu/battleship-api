@@ -53,12 +53,6 @@ class Database
     }
 
 
-    public function fetchAllAsGroupedKeyPair()
-    {
-        return $this->statement->fetchAll(\PDO::FETCH_GROUP | \PDO::FETCH_KEY_PAIR);
-    }
-
-
     public function fetchSingle(): array
     {
         $row = $this->statement->fetch();
