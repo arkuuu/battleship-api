@@ -26,7 +26,7 @@ To place one of your own ships on your battleground, send a request to:
 
 `POST /game/{token}/ship`
 
-In the body you need to define which ship you want to place. Available ships are listed in the `ShipFactory` class. You only have one of each. You define the position of the ship by giving the coordinate for its upper left corner and the direction in which it should point.
+In the body you need to define which ship you want to place. Available ships are listed in the `ShipFactory` class. You only have one of each. You define the position of the ship by giving the coordinate for its upper left corner and the direction in which it should point to.
 ```json
 {
     "ship": "submarine",
@@ -37,8 +37,8 @@ In the body you need to define which ship you want to place. Available ships are
 In this example, your `submarine` ship (length 3) would be placed horizontally on the fields D2, D3 and D4.
 
 #### Fire a shot at your opponent's battleground
-After you have place all of your available ships, it is randomly selected if you or the computer player starts. If the computer starts, he will automatically place his shot.
-When it's your turn, you can place your shot on the opponents battleground by making a request to:
+After you have placed all of your available ships, it is randomly selected if you or the computer player starts. If the computer starts, he will automatically place his shot.
+When it's your turn, you can place your shot on the opponent's battleground by making a request to:
 
 `POST /game/{token}/shot`
 
@@ -63,6 +63,7 @@ He can also shoot his opponent's ships once (or more, as long as the last shot w
 ## TODO
 - Add more intelligent computer player strategies
 - API response formatting wrapper
+- API response for exceptions
 - Improve performance
 - Validation of inputs
 - Switch from handling received shots to handle fired shots, should be more logically then. 
