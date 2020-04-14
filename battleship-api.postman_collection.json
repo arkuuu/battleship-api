@@ -83,7 +83,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/game/{{gameToken}}/shot?XDEBUG_SESSION_START=PHPSTORM",
+					"raw": "{{url}}/game/{{gameToken}}/shot",
 					"host": [
 						"{{url}}"
 					],
@@ -91,12 +91,6 @@
 						"game",
 						"{{gameToken}}",
 						"shot"
-					],
-					"query": [
-						{
-							"key": "XDEBUG_SESSION_START",
-							"value": "PHPSTORM"
-						}
 					]
 				}
 			},
