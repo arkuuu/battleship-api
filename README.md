@@ -1,5 +1,8 @@
 # battleship-api
 
+This is a sample project I was asked to create while applying to a new job in April 2020. The task was to create a REST api to play battleship against the computer.
+This shows how I solved that task in 2020. I have learned a lot since then. The code therefore no longer corresponds completely to how I would do it today.
+
 ## Documentation
 
 ### Setup
